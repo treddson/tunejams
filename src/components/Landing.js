@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
-import Landing from './components/Landing';
-import Library from './components/Library';
 import './App.css';
 
-class App extends Component {
+
+class Landing extends Component {
   render() {
     return (
       <div className="App">
@@ -12,14 +11,11 @@ class App extends Component {
           <h1>Bloc Jams</h1>
         </header>
         <main>
-          <Route exact path="/" component={Landing} />
-          <Route path="/library" component={Library} />
+            <h1>Hello</h1>
         </main>
       </div>
     );
   }
 }
 
-export default App;
-
-
+export default Landing;

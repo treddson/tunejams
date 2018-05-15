@@ -6,11 +6,9 @@ import '../App.css';
 class Album extends Component {
   render() {
     return (
-      <div className="App">
-        <main>
-            <h1>Album component</h1>
-        </main>
-      </div>
+      <section className="album">
+       {this.props.match.params.slug} Album will go here
+      </section>
     );
   }
 }

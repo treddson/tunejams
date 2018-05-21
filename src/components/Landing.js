@@ -18,7 +18,6 @@ const Landing = () => (
       <div className="point">
         <h2 className="point-title">Mobile enabled</h2>
         <p className="point-description">Listen to your music on the go. This streaming service is available on all mobile platforms.</p>
-        <p><i className="icon ion-ionic"></i>testing</p>
       </div>
     </section>
   </section>

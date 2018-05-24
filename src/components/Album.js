@@ -90,7 +90,7 @@ class Album extends Component {
       }
 
       formatTime(e) {
-       console.log(e.target.value);
+      
       }
 
       handleVolumeChange(e) {

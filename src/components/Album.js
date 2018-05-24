@@ -16,11 +16,13 @@ class Album extends Component {
           currentSong: album.songs[0],
           currentTime: 0,
           duration: album.songs[0].duration,
+          volume: .5,
           isPlaying: false
         };
 
         this.audioElement = document.createElement('audio');
         this.audioElement.src = album.songs[0].audioSrc;
+        this.audioElement.volume = this.state.volume;
       }
 
       play() {
@@ -87,7 +89,15 @@ class Album extends Component {
         this.setState({ currentTime: newTime });
       }
 
+      formatTime(e) {
+       console.log(e.target.value);
+      }
 
+      handleVolumeChange(e) {
+        const newVolume = e.target.value;
+        this.audioElement.volume = newVolume;
+        this.setState({ volume: newVolume });
+      }
 
       mouseHover(e) {
         e.target.className = "ion-md-play";
@@ -141,6 +151,8 @@ class Album extends Component {
         handlePrevClick={() => this.handlePrevClick()}
         handleNextClick={() => this.handleNextClick()}
         handleTimeChange={(e) => this.handleTimeChange(e)}
+        formatTime={(e) => this.formatTime(e)}
+        handleVolumeChange={(e) => this.handleVolumeChange(e)}
         />
       </section>
     );

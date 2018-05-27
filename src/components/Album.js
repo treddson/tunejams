@@ -77,7 +77,7 @@ class Album extends Component {
       }
       handleNextClick() {
         const currentIndex = this.state.album.songs.findIndex(song => this.state.currentSong === song);
-        const newIndex = Math.max(0, currentIndex + 1);
+        const newIndex = Math.min(this.state.album.songs.length - 1, currentIndex + 1);
         const newSong = this.state.album.songs[newIndex];
         this.setSong(newSong);
         this.play();
@@ -92,7 +92,7 @@ class Album extends Component {
       formatTime(time) {
         if (isNaN(time)) {return '-:--'}
         const min = Math.floor(time / 60);
-        const seconds = time - min * 60;
+        const seconds = Math.floor(time - min * 60);
         return `${min} : ${seconds}`
       }
 
@@ -113,7 +113,6 @@ class Album extends Component {
       playPause(e) {
        this.state.isPlaying ? e.target.className = "ion-md-play" : e.target.className = "ion-md-pause";
       }
-
 
   render() {
     return (

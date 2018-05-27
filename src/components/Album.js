@@ -29,7 +29,7 @@ class Album extends Component {
         this.audioElement.play();
         this.setState({ isPlaying: true });
       }
-      pause() {
+      pause() { 
         this.audioElement.pause();
         this.setState({ isPlaying: false });
       }
@@ -89,8 +89,11 @@ class Album extends Component {
         this.setState({ currentTime: newTime });
       }
 
-      formatTime(e) {
-      
+      formatTime(time) {
+        if (isNaN(time)) {return '-:--'}
+        const min = Math.floor(time / 60);
+        const seconds = time - min * 60;
+        return `${min} : ${seconds}`
       }
 
       handleVolumeChange(e) {
@@ -151,8 +154,8 @@ class Album extends Component {
         handlePrevClick={() => this.handlePrevClick()}
         handleNextClick={() => this.handleNextClick()}
         handleTimeChange={(e) => this.handleTimeChange(e)}
-        formatTime={(e) => this.formatTime(e)}
         handleVolumeChange={(e) => this.handleVolumeChange(e)}
+        formatTime={(e) => this.formatTime(e)}
         />
       </section>
     );

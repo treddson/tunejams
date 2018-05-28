@@ -93,8 +93,13 @@ class Album extends Component {
         if (isNaN(time)) {return '-:--'}
         const min = Math.floor(time / 60);
         const seconds = Math.floor(time - min * 60);
-        return `${min} : ${seconds}`
+        if (seconds < 10) {
+          return `${min}:0${seconds}`
+        } else {
+          return `${min}:${seconds}`
+        }
       }
+    
 
       handleVolumeChange(e) {
         const newVolume = e.target.value;

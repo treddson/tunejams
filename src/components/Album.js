@@ -16,18 +16,20 @@ class Album extends Component {
           currentSong: album.songs[0],
           currentTime: 0,
           duration: album.songs[0].duration,
+          volume: .5,
           isPlaying: false
         };
 
         this.audioElement = document.createElement('audio');
         this.audioElement.src = album.songs[0].audioSrc;
+        this.audioElement.volume = this.state.volume;
       }
 
       play() {
         this.audioElement.play();
         this.setState({ isPlaying: true });
       }
-      pause() {
+      pause() { 
         this.audioElement.pause();
         this.setState({ isPlaying: false });
       }
@@ -75,7 +77,7 @@ class Album extends Component {
       }
       handleNextClick() {
         const currentIndex = this.state.album.songs.findIndex(song => this.state.currentSong === song);
-        const newIndex = Math.max(0, currentIndex + 1);
+        const newIndex = Math.min(this.state.album.songs.length - 1, currentIndex + 1);
         const newSong = this.state.album.songs[newIndex];
         this.setSong(newSong);
         this.play();
@@ -87,7 +89,23 @@ class Album extends Component {
         this.setState({ currentTime: newTime });
       }
 
+      formatTime(time) {
+        if (isNaN(time)) {return '-:--'}
+        const min = Math.floor(time / 60);
+        const seconds = Math.floor(time - min * 60);
+        if (seconds < 10) {
+          return `${min}:0${seconds}`
+        } else {
+          return `${min}:${seconds}`
+        }
+      }
+    
 
+      handleVolumeChange(e) {
+        const newVolume = e.target.value;
+        this.audioElement.volume = newVolume;
+        this.setState({ volume: newVolume });
+      }
 
       mouseHover(e) {
         e.target.className = "ion-md-play";
@@ -100,7 +118,6 @@ class Album extends Component {
       playPause(e) {
        this.state.isPlaying ? e.target.className = "ion-md-play" : e.target.className = "ion-md-pause";
       }
-
 
   render() {
     return (
@@ -141,6 +158,8 @@ class Album extends Component {
         handlePrevClick={() => this.handlePrevClick()}
         handleNextClick={() => this.handleNextClick()}
         handleTimeChange={(e) => this.handleTimeChange(e)}
+        handleVolumeChange={(e) => this.handleVolumeChange(e)}
+        formatTime={(e) => this.formatTime(e)}
         />
       </section>
     );

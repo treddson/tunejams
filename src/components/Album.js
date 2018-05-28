@@ -145,7 +145,7 @@ class Album extends Component {
                 onClick={(e) => this.playPause(e)}>
                 {index+1} </button>   </td>
                 <td className="song-title"> {song.title}</td>
-                <td className="song-duration"> {song.duration}</td>
+                <td className="song-duration"> {this.formatTime(song.duration)}</td>
               </tr>
               )}
           </tbody>

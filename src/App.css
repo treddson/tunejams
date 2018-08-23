@@ -1,24 +1,63 @@
+@mixin section-padding {
+  padding: 10vh 0;
+  @media (min-width: 768px) { 
+    padding: 20vh 0;
+  }
+}
+
+:root {
+  --background: linear-gradient(to right, #ff6e7f, #bfe9ff);
+  --font: #333;
+  --header-font: 'Sedgwick Ave Display', cursive;
+}
+
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.bloc-header {
+  text-shadow: 3px 3px 5px  #bfe9ff;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.home-nav {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
 }
 
-.App-title {
-  font-size: 1.5em;
+.home-nav:hover {
+  opacity: .5;
 }
 
-.App-intro {
-  font-size: large;
+a {
+	text-decoration: none;
+	color: var(--font);
+	font-family: ;
+	font-size: 1.1em;
 }
 
+body {
+  background: var(--background);
+}
+
+.bloc-header {
+  font-family: var(--header-font);
+  font-size: 50px;
+}
+
+.library, .bloc-header, nav, .album {
+	padding: 35px 100px 0;
+  animation: 1s slidefade 1s forwards;
+	opacity: 0;
+	color: var(--font);
+	-webkit-font-smoothing: antialiased;
+	z-index: 10;
+}
+
+@keyframes slidefade {
+  100% {
+    opacity: 1;
+    margin: 0;
+  }
+}

@@ -4,7 +4,7 @@ import albumData from './../data/albums';
 import PlayerBar from './PlayerBar';
 
 
-class Album extends Component {
+export default class Album extends Component {
     constructor(props) {
       super(props);
 
@@ -165,5 +165,3 @@ class Album extends Component {
     );
   }
 }
-
-export default Album;

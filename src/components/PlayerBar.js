@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-class PlayerBar extends Component {
+export default class PlayerBar extends Component {
     render() {
         return (
             <section className="player-bar">
@@ -46,4 +46,3 @@ class PlayerBar extends Component {
     }
 }
 
-export default PlayerBar;

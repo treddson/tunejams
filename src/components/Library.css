@@ -15,7 +15,7 @@
 .Album-Cover:hover,
 .Album-Cover:focus,
 .Album-Cover:active {
-    transform: scale(1.1);
+    transform: scale(0.9);
 }
 
 .song-info {

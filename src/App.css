@@ -24,11 +24,9 @@
   display: flex;
   flex-direction: column;
   list-style: none;
+  line-height: 1.5em;
 }
 
-.home-nav:hover {
-  opacity: .5;
-}
 
 a {
 	text-decoration: none;

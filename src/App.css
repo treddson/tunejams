@@ -7,7 +7,7 @@
 
 :root {
   --background: linear-gradient(to right, #ff6e7f, #bfe9ff);
-  --font: #333;
+  --font: rgb(53, 53, 53);
   --header-font: 'Sedgwick Ave Display', cursive;
 }
 

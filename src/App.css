@@ -1,9 +1,4 @@
-@mixin section-padding {
-  padding: 10vh 0;
-  @media (min-width: 768px) { 
-    padding: 20vh 0;
-  }
-}
+
 
 :root {
   --background: linear-gradient(to right, #ff6e7f, #bfe9ff);
@@ -57,5 +52,12 @@ body {
   100% {
     opacity: 1;
     margin: 0;
+  }
+}
+
+@mixin section-padding {
+  padding: 10vh 0;
+  @media (min-width: 768px) { 
+    padding: 20vh 0;
   }
 }

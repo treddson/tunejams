@@ -4,16 +4,36 @@ import React, { Component } from 'react';
 export default class PlayerBar extends Component {
     render() {
         return (
-          <section className="player-bar">
+          <section 
+            style={{
+              marginBottom: '50px'
+            }}
+            className="player-bar">
             <section id="buttons">
               <button id="previous" onClick={this.props.handlePrevClick}>
-                <span className="ion-md-skip-backward"></span>
+                <span 
+                    style={{
+                      paddingRight: '5px',
+                      borderRadius: '5%'
+                    }}
+                    className="fas fa-backward"></span>
               </button>
               <button id="play-pause" onClick={this.props.handleSongClick} >
-                <span className={this.props.isPlaying ? 'ion-md-pause' : 'ion-md-play'}></span>
+                <span 
+                    style={{
+                      borderRadius: '5%',
+                      paddingRight: '5px',
+                      paddingLeft: '5px'
+                    }}
+                  className={this.props.isPlaying ? 'fas fa-pause' : 'fas fa-play'}></span>
               </button>
               <button id="next" onClick={this.props.handleNextClick}>
-                <span className="ion-md-skip-forward"></span>
+                <span 
+                    style={{
+                      borderRadius: '5%',
+                      paddingLeft: '5px'
+                    }}
+                className="fas fa-forward"></span>
               </button>
             </section>
             <section id="time-control">

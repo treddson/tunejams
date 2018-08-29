@@ -108,7 +108,7 @@ export default class Album extends Component {
       }
 
       mouseHover(e) {
-        e.target.className = "ion-md-play";
+        e.target.className = "fas fa-play";
       }
 
       mouseLeave(e) {
@@ -116,14 +116,18 @@ export default class Album extends Component {
       }
 
       playPause(e) {
-       this.state.isPlaying ? e.target.className = "ion-md-play" : e.target.className = "ion-md-pause";
+       this.state.isPlaying ? e.target.className = "fas fa-play" : e.target.className = "fas fa-pause";
       }
 
   render() {
+  
     return (
       <section className="album">
         <section id="album-info">
-           <img id="album-cover-art" src={this.state.album.albumCover} alt={this.state.album.title} />
+           <img 
+              style={{
+                borderRadius: '5px'
+              }}id="album-cover-art" src={this.state.album.albumCover} alt={this.state.album.title} />
            <div className="album-details">
              <h1 id="album-title">{this.state.album.title}</h1>
              <h2 className="artist">{this.state.album.artist}</h2>
@@ -139,10 +143,19 @@ export default class Album extends Component {
           <tbody>
               {this.state.album.songs.map( (song, index) =>
               <tr className="song" key={index} onClick={() => this.handleSongClick(song)}>
-                <td className="song-actions"> <button className="song-number" 
-                onMouseEnter={(e) => this.mouseHover(e)} 
-                onMouseLeave={(e) => this.mouseLeave(e)}
-                onClick={(e) => this.playPause(e)}>
+                <td className="song-actions"> 
+                <button 
+                  style={{
+                    fontSize: '12px',
+                    height: '25px',
+                    width: '40px',
+                    borderRadius: '15%',
+                    outline: 'none'
+                  }}
+                  className="song-number" 
+                  onMouseEnter={(e) => this.mouseHover(e)} 
+                  onMouseLeave={(e) => this.mouseLeave(e)}
+                  onClick={(e) => this.playPause(e)}>
                 {index+1} </button>   </td>
                 <td className="song-title"> {song.title}</td>
                 <td className="song-duration"> {this.formatTime(song.duration)}</td>

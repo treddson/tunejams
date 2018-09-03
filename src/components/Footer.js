@@ -6,13 +6,12 @@ const Footer = (props) => {
   return (
     <footer 
         style={{
-            position: 'flex',
+            display: 'flex',
             flexDirection: 'row',
-            height: '80px',
+            justifyContent: 'center',
             color: 'rgb(53, 53, 53)'
         }}>
-      <p>{ props.copyright }</p>
-      <p>{ props.name }</p>
+      <p>{ props.copyright } { props.name }</p>
     </footer>
   )
 }

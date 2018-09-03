@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 class App extends Component {
   render() {
     return (
+      <React.Fragment>
       <div className="App">
          <header>
            <nav className="home-nav">
@@ -37,8 +38,9 @@ class App extends Component {
           <Route path="/library" component={Library} />
           <Route path="/album/:slug" component={Album} />
         </main>
+        </div>
         <Footer copyright="Copyright 2018" name="Taylor Short"/>
-      </div>
+      </React.Fragment>
     );
   }
 }

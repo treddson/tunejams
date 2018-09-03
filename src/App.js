@@ -4,6 +4,8 @@ import Landing from './components/Landing';
 import Library from './components/Library';
 import Album from './components/Album';
 import './App.css';
+import Footer from './components/Footer';
+
 
 class App extends Component {
   render() {
@@ -11,16 +13,31 @@ class App extends Component {
       <div className="App">
          <header>
            <nav className="home-nav">
-            <Link to='/'>Home</Link>
-            <Link to='/library'>Library</Link>
+            <div className="section">
+            <h1 
+              style={{
+                textShadow: '3px 3px 5px  #bfe9ff',
+                fontSize: '50px',
+                color: '#333'
+              }}
+              className="bloc-header">Bloc Jams</h1>
+            </div>
+            <div 
+               style={{
+                 fontSize: '25px'
+               }}
+               className="section">
+            <Link className="bloc-header" to='/'>Home</Link>
+            <Link className="bloc-header" to='/library'>Library</Link>
+            </div>
            </nav>
-          <h1 className="bloc-header">Bloc Jams</h1>
          </header>
         <main>
           <Route exact path="/" component={Landing} />
           <Route path="/library" component={Library} />
           <Route path="/album/:slug" component={Album} />
         </main>
+        <Footer copyright="Copyright 2018" name="Taylor Short"/>
       </div>
     );
   }

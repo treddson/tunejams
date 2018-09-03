@@ -13,33 +13,36 @@
 
 .bloc-header {
   text-shadow: 3px 3px 5px  #bfe9ff;
+  font-family: var(--header-font);  
+}
+
+.section {
+  padding-left: 200px;
+  padding-right: 200px;
 }
 
 .home-nav {
   display: flex;
-  flex-direction: column;
-  list-style: none;
-  line-height: 1.5em;
+  flex-direction: 'row'; 
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  line-height: 4em;
 }
 
 
 a {
 	text-decoration: none;
 	color: var(--font);
-	font-family: ;
-	font-size: 1.1em;
+  font-size: 1.1em;
+  margin: 15px
 }
 
 body {
   background: var(--background);
 }
 
-.bloc-header {
-  font-family: var(--header-font);
-  font-size: 50px;
-}
-
-.library, .bloc-header, nav, .album {
+.library, .album {
 	padding: 35px 100px 0;
   animation: 1s slidefade 1s forwards;
 	opacity: 0;

@@ -1,6 +1,6 @@
 # Tune Jams
 
-This is a Spotify-like music player - built using React/React Router and customer CSS. It features album artwork and a fully functional player bar with volume slider and backward/forward controls. More music and features will be added in the future.
+This is a Spotify-like music player - built using React/React Router and custom CSS. It features album artwork and a fully functional player bar with volume slider and backward/forward controls. More music and features will be added in the future.
 
 ## Getting Started
 

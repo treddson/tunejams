@@ -4,11 +4,7 @@ This is a Spotify-like music player - built using React/React Router and custome
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-No prerequisites required
+No setup necessary - just plug in your headphones and press play!
 
 ### Installing
 

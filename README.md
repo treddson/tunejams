@@ -12,7 +12,7 @@ No installation required.
 
 ## Deployment
 
-* [Tune Jams](https://ecstatic-sinoussi-0deece.netlify.com/) Link to site demo
+* [Tune Jams](https://ecstatic-sinoussi-0deece.netlify.com/) - Link to site demo
 
 ## Built With
 

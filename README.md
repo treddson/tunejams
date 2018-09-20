@@ -10,7 +10,7 @@ No setup necessary - just plug in your headphones and press play!
 
 No installation required.
 
-## Deployment
+## Live site
 
 * [Tune Jams](https://ecstatic-sinoussi-0deece.netlify.com/) - Link to site demo
 

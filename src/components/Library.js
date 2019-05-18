@@ -5,10 +5,9 @@ import '../App.css';
 import './Library.css'
 
 class Library extends Component {
-    constructor(props) {
-      super(props);
-      this.state = { albums: albumData };
-    }
+
+  state = { albums: albumData };
+
   render() {
     return (
       <section className='library'>
@@ -21,7 +20,7 @@ class Library extends Component {
                 <div>Artist: {album.artist}</div>
                 <div>{album.songs.length} tracks</div>
               </div>
-            </Link> 
+            </Link>
        )
       }
       </section>

@@ -17,7 +17,7 @@ class App extends Component {
             <div className="section">
             <h1 
               style={{
-                textShadow: '3px 3px 5px  #bfe9ff',
+                textShadow: '3px 3px 5px #bfe9ff',
                 fontSize: '50px',
                 color: '#333'
               }}

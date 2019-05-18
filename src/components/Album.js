@@ -29,7 +29,7 @@ export default class Album extends Component {
         this.audioElement.play();
         this.setState({ isPlaying: true });
       }
-      pause() { 
+      pause() {
         this.audioElement.pause();
         this.setState({ isPlaying: false });
       }
@@ -99,7 +99,7 @@ export default class Album extends Component {
           return `${min}:${seconds}`
         }
       }
-    
+
 
       handleVolumeChange(e) {
         const newVolume = e.target.value;
@@ -120,11 +120,11 @@ export default class Album extends Component {
       }
 
   render() {
-  
+
     return (
       <section className="album">
         <section id="album-info">
-           <img 
+           <img
               style={{
                 borderRadius: '5px'
               }}id="album-cover-art" src={this.state.album.albumCover} alt={this.state.album.title} />
@@ -143,8 +143,8 @@ export default class Album extends Component {
           <tbody>
               {this.state.album.songs.map( (song, index) =>
               <tr className="song" key={index} onClick={() => this.handleSongClick(song)}>
-                <td className="song-actions"> 
-                <button 
+                <td className="song-actions">
+                <button
                   style={{
                     fontSize: '12px',
                     height: '25px',
@@ -152,8 +152,8 @@ export default class Album extends Component {
                     borderRadius: '15%',
                     outline: 'none'
                   }}
-                  className="song-number" 
-                  onMouseEnter={(e) => this.mouseHover(e)} 
+                  className="song-number"
+                  onMouseEnter={(e) => this.mouseHover(e)}
                   onMouseLeave={(e) => this.mouseLeave(e)}
                   onClick={(e) => this.playPause(e)}>
                 {index+1} </button>   </td>
@@ -163,11 +163,11 @@ export default class Album extends Component {
               )}
           </tbody>
         </table>
-        <PlayerBar isPlaying={this.state.isPlaying} 
-        currentSong={this.state.currentSong} 
+        <PlayerBar isPlaying={this.state.isPlaying}
+        currentSong={this.state.currentSong}
         currentTime={this.audioElement.currentTime}
         duration={this.audioElement.duration}
-        handleSongClick={() => this.handleSongClick(this.state.currentSong)} 
+        handleSongClick={() => this.handleSongClick(this.state.currentSong)}
         handlePrevClick={() => this.handlePrevClick()}
         handleNextClick={() => this.handleNextClick()}
         handleTimeChange={(e) => this.handleTimeChange(e)}

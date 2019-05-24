@@ -12,27 +12,15 @@ class App extends Component {
     return (
       <React.Fragment>
       <div className="App">
-         <header>
            <nav className="home-nav">
-            <div className="section">
-            <h1 
-              style={{
-                textShadow: '3px 3px 5px #bfe9ff',
-                fontSize: '50px',
-                color: '#333'
-              }}
-              className="bloc-header">Bloc Jams</h1>
-            </div>
-            <div 
-               style={{
-                 fontSize: '25px'
-               }}
-               className="section">
-            <Link className="bloc-header" to='/'>Home</Link>
-            <Link className="bloc-header" to='/library'>Library</Link>
-            </div>
+              <div className="section">
+                <h1><Link id="bloc-title" to='/'>Tune Jams</Link></h1>
+              </div>
+              <div className="section">
+                <Link className="bloc-header" to='/'>Home</Link>
+                <Link className="bloc-header" to='/library'>Library</Link>
+              </div>
            </nav>
-         </header>
         <main>
           <Route exact path="/" component={Landing} />
           <Route path="/library" component={Library} />

@@ -13,11 +13,11 @@
     margin-bottom: 20px;
 }
 
-.Album-Cover:hover,
+/* .Album-Cover:hover,
 .Album-Cover:focus,
 .Album-Cover:active {
     transform: scale(0.9);
-}
+} */
 
 .song-info {
     padding-bottom: 15px;

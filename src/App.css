@@ -13,17 +13,25 @@
 
 .bloc-header {
   text-shadow: 3px 3px 5px  #bfe9ff;
-  font-family: var(--header-font); 
+  font-family: var(--header-font);
 }
 
 .section {
   padding-left: 200px;
   padding-right: 200px;
+  font-size: 25px;
+}
+
+#bloc-title {
+  text-shadow: 3px 3px 5px #bfe9ff;
+  font-size: 50px;
+  color: #333;
+  font-family: var(--header-font);
 }
 
 .home-nav {
   display: flex;
-  flex-direction: 'row'; 
+  flex-direction: 'row';
   justify-content: space-between;
   align-items: baseline;
   flex-wrap: wrap;
@@ -60,7 +68,7 @@ body {
 
 @mixin section-padding {
   padding: 10vh 0;
-  @media (min-width: 768px) { 
+  @media (min-width: 768px) {
     padding: 20vh 0;
   }
 }
